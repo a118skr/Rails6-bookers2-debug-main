@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_action :ensure_correct_user, only: [:edit, :update]  #本人のみ編集画面遷移可能
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]  #本人のみ編集画面遷移可能
 
   def show
     @book = Book.find(params[:id])
